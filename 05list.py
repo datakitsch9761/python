@@ -129,79 +129,90 @@ lang
 lang.remove('java')
 lang.remove('C/C++')
 
-# 과일 리스트에서 야채 삭제하기
-fruits = ['사과', '망고','당근','수박','포도','참외','토마토']
 
-#위치값으로 삭제
-fruits
+# 과일 리스트에서 야채 삭제하기
+fruits = ['사과','망고','당근','수박','포도','참외','토마토']
+
+# 위치값으로 삭제
 fruits.pop(2)
+fruits
 
 fruits.pop(5)
 fruits
 
-#값으로 삭제하기
-fruits = ['사과', '망고','당근','수박','포도','참외','토마토']
+# 값으로 삭제
+fruits = ['사과','망고','당근','수박','포도','참외','토마토']
 
 fruits.remove('당근')
 fruits.remove('토마토')
-fruits
 
-#공인중개사 합격여부 알아보기
-exam = [55,65,40,70,65,30]
+
+# 공인중개사 합격여부 알아보기
+exam = [55,35,40,70,65,30]
 exam = [55,60,40,70,65,70]
 
-cnt = int(len(exam))
+cnt = len(exam)
 sum = 0
 fails = 0
-result = '아쉽습니다. 불합격하셨습니다.'
+result = '아쉽습니다. 불합격하셨습니다'
 
-for i in range(cnt) :
-    if exam[i] < 40 : fails += 1 #과락 과목수 증가
+for i in range(cnt):
+    if exam[i] < 40: fails += 1   # 과락수 증가
     sum += int(exam[i])
 
 avg = sum / cnt
-if fails == 0 and avg >= 60 :
-    result = '축하합니다. 합격하셨습니다 '
+if fails == 0 and avg >= 60:
+    result = '축하합니다. 합격하셨습니다'
 
-print(f'평균점수 : {sum / cnt : .2f}')
+print(f'평균점수 : {avg:.2f}')
 print(result)
 
-#정렬하기
+
+# 정렬하기
 numbers = [5,1,3,4,2,6]
 
-numbers.sort() #기본값이 False
+numbers.sort()
 numbers
 
 numbers.sort(reverse=True)
-numbers #True를 적용한 후에 내림차순
+numbers
 
-#모의고사 점수 내림차순으로 정렬하기
-mockexam = [90,100,88,85,95,92,70,75,100,92,78,80,75,95,90,100,84]
-mockexam.sort(reverse=True)
-mockexam
 
-#문자 정렬 (한글)
-names = ['김길동', '박길동', '이길동','정길동','홍길동']
+# 모의고사 점수 정렬
+jumsu = [90,100,88,85,95,92,70,75,100,92,78,80,75,95,90,100,84]
+jumsu.sort(reverse=True)
+jumsu
+
+
+# 문자 정렬 (한글)
+names = ['김길동','박길동','이길동','정길동','홍길동']
 names.sort(reverse=True)
 names
 
-#문자 정렬 (영어)
-units = ['scv','marine','firebat','ghots','dropship','battlecruiser','valkyrie','medic']
-units.sort()
+# 문자 정렬 (영어)
+units = ['scv','marine','firebat','ghost','dropship',
+         'battlecruiser','valkyrie','medic']
+units.sort(reverse=True)
 units
 
 
-#리스트 슬라이싱
+# 리스트 슬라이싱
 alphabet = ['a','b','c','d','e','f','g','h','i','j']
-alphabet[2:6]
-alphabet[0:5]
-alphabet[:5]
-alphabet[3:8] # 3 ~  7 까지
-alphabet[5:10] # 5 ~ 끝까지
-alphabet[5:] # 5 ~ 끝까지
 
-alphabet[6:] #6 ~ 끝까지 추출
-alphabet[-4:] #오른쪽을 기준으로 왼쪽으로 4번째 요소를 시작으로
+alphabet[2:6]  # 2~5까지 추출
+
+alphabet[0:5]  # 0~4까지 추출
+alphabet[:5]   # 0~4까지 추출
+
+alphabet[3:8]  # 3~7까지 추출
+
+alphabet[5:10]  # 5~끝까지 추출
+alphabet[5:]    # 5~끝까지 추출
+
+alphabet[3:9]  # 3~8까지 추출
+
+alphabet[6:]   # 6~끝까지 추출
+alphabet[-4:]  # 뒤에서부터 앞으로 4번째 요소를 시작
 
 # a b c d e
 # 1 2 3 4 5
@@ -212,8 +223,19 @@ alphabet[0:4]
 alphabet[:4]
 alphabet[:-6]
 
-# d c b ,a 추출
-alphabet[-7:-11:-1]
+
+# 슬라이싱 고급기능
+alphabet[::-1]
+alphabet[1::-1]
+alphabet[3::-1]
 alphabet[:-3:-1]
 
+
+# d,c,b,a 추출
+alphabet[3::-1]
+alphabet[-7:-11:-1]
+alphabet[-7::-1]
+
 # g,h,e,d 추출
+
+
