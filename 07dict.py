@@ -53,8 +53,7 @@ for k, v in person.items():
 
 
 # 중간고사 성적 관리
-midsj = {'C/C++':'A', 'Java':'B+', '네트워킹':'C',
-           '보안':'A+', '해킹':'F', '시스템':'C+'}
+midsj = {'C/C++':'A', 'Java':'B+', '네트워킹':'C','보안':'A+', '해킹':'F', '시스템':'C+'}
 
 midsj['Java']
 midsj['시스템']
